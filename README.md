@@ -58,6 +58,8 @@ Windows 下可以直接用包装脚本:
 chizhu add -m gemini-3.5-pro -s minor "import 了三个不存在的库" "幻觉出一整套不存在的开源生态"
 ```
 
+> 💡 **让 AI 自己记账**:把 [`AGENTS.md`](AGENTS.md) 丢给你的 AI 编程助手(或直接放在项目根目录,多数工具会自动读取),它就知道怎么规范地往柱上钉错误了——你说一句「记一下这次翻车」即可。
+
 ## 数据
 
 记录存在 `data/mistakes.jsonl`(JSON Lines,每行一条),默认不入库,你的黑历史只属于你自己。想换位置可以用 `--data` 参数或环境变量 `CHIZHU_DATA`。
