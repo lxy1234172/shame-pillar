@@ -1,6 +1,6 @@
 [中文](README.md) | English
 
-# Shame Pillar · chizhu
+# Shame Pillar · chiruzhu
 
 > Every mistake deserves to be nailed to the pillar.
 
@@ -12,7 +12,7 @@ We rely on AI coding assistants more and more — and they fail more and more: h
 
 ## Demo
 
-The real-time dashboard (`python chizhu.py serve`):
+The real-time dashboard (`python chiruzhu.py serve`):
 
 ![Web dashboard](docs/web_demo.png)
 
@@ -33,33 +33,33 @@ Zero third-party dependencies. Runs on Python 3.9+, Windows / macOS / Linux.
 
 ```bash
 # Nail a mistake
-python chizhu.py add -m gpt-5.6-sol -s fatal -t "regex,production" \
+python chiruzhu.py add -m gpt-5.6-sol -s fatal -t "regex,production" \
   "changed .* to .*? and log parsing silently dropped half the data" \
   "only eyeballed the matches, never considered how non-greedy quantifiers behave on multi-line logs"
 
 # List records on the pillar
-python chizhu.py list
+python chiruzhu.py list
 
 # Repeat-offender leaderboard
-python chizhu.py stats
+python chiruzhu.py stats
 
 # Random reflection
-python chizhu.py reflect
+python chiruzhu.py reflect
 
 # Lesson learned — close the books
-python chizhu.py resolve <id> --note "verify first; admit what you don't know"
+python chiruzhu.py resolve <id> --note "verify first; admit what you don't know"
 
 # Open the live web dashboard
-python chizhu.py serve
+python chiruzhu.py serve
 
 # Export the HTML wall of shame
-python chizhu.py export --open
+python chiruzhu.py export --open
 ```
 
 On Windows you can use the wrapper script directly:
 
 ```bat
-chizhu add -m gemini-3.5-pro -s minor "imported three libraries that do not exist" "hallucinated an entire open-source ecosystem"
+chiruzhu add -m gemini-3.5-pro -s minor "imported three libraries that do not exist" "hallucinated an entire open-source ecosystem"
 ```
 
 > 💡 **Let your AI do the bookkeeping**: point your AI coding assistant at [`AGENTS.md`](AGENTS.md) (or just keep it in the repo root — most tools pick it up automatically), and it will know exactly how to nail mistakes onto the pillar. All you say is "log this failure".

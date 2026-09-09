@@ -1,6 +1,6 @@
 中文 | [English](README_EN.md)
 
-# 耻辱柱 · chizhu
+# 耻辱柱 · chiruzhu
 
 > 每一行错误,都值得被钉在柱上。
 
@@ -10,7 +10,7 @@ AI 编程助手越用越多,它们犯的错也越来越多:幻觉出压根不存
 
 ## 演示
 
-实时监控台(`python chizhu.py serve`):
+实时监控台(`python chiruzhu.py serve`):
 
 ![实时监控台](docs/web_demo.png)
 
@@ -31,33 +31,33 @@ AI 编程助手越用越多,它们犯的错也越来越多:幻觉出压根不存
 
 ```bash
 # 钉一条错误
-python chizhu.py add -m gpt-5.6-sol -s fatal -t "正则,生产事故" \
+python chiruzhu.py add -m gpt-5.6-sol -s fatal -t "正则,生产事故" \
   "把 .* 改成 .*? 导致日志解析漏了一半数据" \
   "只看了匹配结果没看边界条件,非贪婪匹配在多行日志上行为完全不同"
 
 # 查看柱上记录
-python chizhu.py list
+python chiruzhu.py list
 
 # 惯犯榜
-python chizhu.py stats
+python chiruzhu.py stats
 
 # 随机抽一条面壁思过
-python chizhu.py reflect
+python chiruzhu.py reflect
 
 # 吸取教训,销账
-python chizhu.py resolve <id> --note "先查再说,不知道就承认不知道"
+python chiruzhu.py resolve <id> --note "先查再说,不知道就承认不知道"
 
 # 打开 Web 实时监控台
-python chizhu.py serve
+python chiruzhu.py serve
 
 # 导出 HTML 耻辱墙
-python chizhu.py export --open
+python chiruzhu.py export --open
 ```
 
 Windows 下可以直接用包装脚本:
 
 ```bat
-chizhu add -m gemini-3.5-pro -s minor "import 了三个不存在的库" "幻觉出一整套不存在的开源生态"
+chiruzhu add -m gemini-3.5-pro -s minor "import 了三个不存在的库" "幻觉出一整套不存在的开源生态"
 ```
 
 > 💡 **让 AI 自己记账**:把 [`AGENTS.md`](AGENTS.md) 丢给你的 AI 编程助手(或直接放在项目根目录,多数工具会自动读取),它就知道怎么规范地往柱上钉错误了——你说一句「记一下这次翻车」即可。

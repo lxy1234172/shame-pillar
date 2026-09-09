@@ -7,7 +7,7 @@
 在项目根目录执行:
 
 ```bash
-python chizhu.py add -m <模型名> -s <级别> -c "<案发背景>" -t "<标签1,标签2>" "<犯了什么错>" "<为什么会犯>"
+python chiruzhu.py add -m <模型名> -s <级别> -c "<案发背景>" -t "<标签1,标签2>" "<犯了什么错>" "<为什么会犯>"
 ```
 
 - `-m / --model`:必填。犯错的是哪个模型(如 `gpt-5.6-sol`),如实写,别甩锅给别人。
@@ -19,7 +19,7 @@ python chizhu.py add -m <模型名> -s <级别> -c "<案发背景>" -t "<标签1
 示例:
 
 ```bash
-python chizhu.py add -m gpt-5.6-sol -s major -c "重构用户模块" -t "API幻觉" \
+python chiruzhu.py add -m gpt-5.6-sol -s major -c "重构用户模块" -t "API幻觉" \
   "import 了一个不存在的库 fluent.orm" \
   "把训练语料里见过的库名当成了真实生态,没有先验证依赖是否可安装"
 ```
@@ -36,15 +36,15 @@ python chizhu.py add -m gpt-5.6-sol -s major -c "重构用户模块" -t "API幻�
 
 - 优先用 CLI 添加;直接编辑文件时**禁止**改动或删除既有行,只能追加新行。
 - 不要动 `data/mistakes.jsonl` 以外的数据文件(`mistakes.example.jsonl` 是示例)。
-- 用户说「销账/吸取教训」时,先用 `python chizhu.py list` 找到 ID,再执行 `python chizhu.py resolve <id> --note "<教训>"`。
-- 用户明确要求删除时才可执行 `python chizhu.py del <id> --force`,并提醒一句:耻辱不该被轻易抹去。
+- 用户说「销账/吸取教训」时,先用 `python chiruzhu.py list` 找到 ID,再执行 `python chiruzhu.py resolve <id> --note "<教训>"`。
+- 用户明确要求删除时才可执行 `python chiruzhu.py del <id> --force`,并提醒一句:耻辱不该被轻易抹去。
 
 ## 其他常用命令
 
 ```bash
-python chizhu.py list          # 查看记录
-python chizhu.py stats         # 惯犯榜
-python chizhu.py reflect       # 随机面壁思过
-python chizhu.py serve         # Web 实时监控台
-python chizhu.py export --open # 导出 HTML 耻辱墙
+python chiruzhu.py list          # 查看记录
+python chiruzhu.py stats         # 惯犯榜
+python chiruzhu.py reflect       # 随机面壁思过
+python chiruzhu.py serve         # Web 实时监控台
+python chiruzhu.py export --open # 导出 HTML 耻辱墙
 ```

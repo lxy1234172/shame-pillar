@@ -768,14 +768,14 @@ def cmd_serve(args, path):
 def build_parser():
     sev_help = "级别:" + " ".join(f"{k}={v}" for k, v in SEVERITIES.items())
     parser = argparse.ArgumentParser(
-        prog="chizhu",
+        prog="chiruzhu",
         description="耻辱柱 —— 让 AI 把自己犯的错钉在柱上(时间、模型、原因,一条不少)。",
         epilog="示例:\n"
-               "  python chizhu.py add -m gpt-4o -s fatal -c \"生产迁移\" -t \"数据库\" \"误删 users 表\" \"未确认环境就执行了 DROP\"\n"
-               "  python chizhu.py list --model gpt-4o\n"
-               "  python chizhu.py reflect\n"
-               "  python chizhu.py serve\n"
-               "  python chizhu.py export --open\n",
+               "  python chiruzhu.py add -m gpt-4o -s fatal -c \"生产迁移\" -t \"数据库\" \"误删 users 表\" \"未确认环境就执行了 DROP\"\n"
+               "  python chiruzhu.py list --model gpt-4o\n"
+               "  python chiruzhu.py reflect\n"
+               "  python chiruzhu.py serve\n"
+               "  python chiruzhu.py export --open\n",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument("--data", help="数据文件路径(默认 %(default)s,或环境变量 CHIZHU_DATA)")
