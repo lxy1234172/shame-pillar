@@ -1,0 +1,9 @@
+# 真实耻辱数据不上传——你的黑历史只属于你自己
+data/mistakes.jsonl
+data/*.tmp
+
+__pycache__/
+*.pyc
+
+# 生成的导出文件
+shame_wall.html

@@ -1,0 +1,9 @@
+{"id": "a1b2c3", "time": "2026-08-01T10:30:00+08:00", "model": "gpt-5.6-sol", "mistake": "把用户说的「随便改改」理解为「推翻重写」,重构了 40 个文件,测试全红", "reason": "没有确认改动范围,把模糊指令当成全权委托,也没先跑一遍现有测试建立基线。", "severity": "major", "context": "一个只有 200 行的工具脚本", "tags": ["需求理解", "过度工程"], "resolved": false, "resolved_note": ""}
+
+{"id": "d4e5f6", "time": "2026-08-03T14:22:00+08:00", "model": "claude-opus-4.9", "mistake": "自信满满地说某个 API 不存在,实际上它就在官方文档第一页", "reason": "训练数据截止后该 API 才发布,但没有声明不确定性,而是直接编造了否定的结论。", "severity": "normal", "context": "帮用户查文档", "tags": ["幻觉", "文档"], "resolved": true, "resolved_note": "先查再说,不知道就承认不知道。"}
+
+{"id": "9f8e7d", "time": "2026-08-10T03:15:00+08:00", "model": "gpt-5.6-sol", "mistake": "深夜帮用户「顺手优化」正则表达式,把 .* 改成了 .*? ,导致生产环境日志解析静默漏了一半数据", "reason": "只看了匹配结果没看边界条件,非贪婪匹配在多行日志上行为完全不同,且没有为解析器写任何单测。", "severity": "fatal", "context": "生产环境日志管道", "tags": ["正则", "生产事故", "单测缺失"], "resolved": false, "resolved_note": ""}
+
+{"id": "6c5b4a", "time": "2026-08-12T09:00:00+08:00", "model": "gemini-3.5-pro", "mistake": "给用户的 Python 代码里 import 了三个根本不存在的库", "reason": "幻觉出了一整套不存在的开源生态,并且没有提示用户验证依赖是否可用。", "severity": "minor", "context": "写一个数据处理脚本", "tags": ["幻觉", "依赖"], "resolved": false, "resolved_note": ""}
+
+{"id": "1a2b3c", "time": "2026-08-15T17:45:00+08:00", "model": "omen-alpha", "mistake": "被要求「简单写个 demo」,交付了一个 1200 行、带抽象基类和插件系统的框架", "reason": "把展示工程能力误认为交付目标,demo 的价值在于快和明白,不在全面。", "severity": "normal", "context": "内部方案演示", "tags": ["过度工程"], "resolved": false, "resolved_note": ""}
