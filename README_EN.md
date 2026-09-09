@@ -66,7 +66,7 @@ chiruzhu add -m gemini-3.5-pro -s minor "imported three libraries that do not ex
 
 ## Data
 
-Records live in `data/mistakes.jsonl` (JSON Lines, one record per line) and are not committed by default — your hall of shame belongs to you alone. Use `--data` or the `CHIZHU_DATA` environment variable to store it elsewhere.
+Records live in `data/mistakes.jsonl` (JSON Lines, one record per line) and are not committed by default — your hall of shame belongs to you alone. Use `--data` or the `CHIRUZHU_DATA` environment variable to store it elsewhere.
 
 A fictional sample dataset is available at [`data/mistakes.example.jsonl`](data/mistakes.example.jsonl).
 

@@ -64,7 +64,7 @@ chiruzhu add -m gemini-3.5-pro -s minor "import 了三个不存在的库" "幻�
 
 ## 数据
 
-记录存在 `data/mistakes.jsonl`(JSON Lines,每行一条),默认不入库,你的黑历史只属于你自己。想换位置可以用 `--data` 参数或环境变量 `CHIZHU_DATA`。
+记录存在 `data/mistakes.jsonl`(JSON Lines,每行一条),默认不入库,你的黑历史只属于你自己。想换位置可以用 `--data` 参数或环境变量 `CHIRUZHU_DATA`。
 
 虚构示例数据见 [`data/mistakes.example.jsonl`](data/mistakes.example.jsonl)。
 

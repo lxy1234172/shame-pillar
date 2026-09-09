@@ -19,7 +19,7 @@ SEVERITIES = {"minor": "轻微", "normal": "一般", "major": "严重", "fatal":
 
 
 def data_path(args):
-    return Path(args.data or os.environ.get("CHIZHU_DATA") or DEFAULT_DATA)
+    return Path(args.data or os.environ.get("CHIRUZHU_DATA") or DEFAULT_DATA)
 
 
 def load_records(path):
