@@ -1,3 +1,5 @@
+中文 | [English](README_EN.md)
+
 # 耻辱柱 · chizhu
 
 > 每一行错误,都值得被钉在柱上。
